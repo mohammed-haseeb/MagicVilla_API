@@ -63,6 +63,7 @@ namespace MagicVilla_VillaAPI.Controllers
 				}
 
 				var villa = await _dbVilla.GetAsync(u => u.Id == id);
+				
 				if (villa == null)
 				{
 					_response.StatusCode = HttpStatusCode.NotFound;
