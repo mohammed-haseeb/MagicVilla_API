@@ -63,7 +63,7 @@ namespace MagicVilla_VillaAPI.Controllers
 				}
 
 				var villa = await _dbVilla.GetAsync(u => u.Id == id);
-				
+
 				if (villa == null)
 				{
 					_response.StatusCode = HttpStatusCode.NotFound;
@@ -129,7 +129,6 @@ namespace MagicVilla_VillaAPI.Controllers
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public async Task<ActionResult<APIResponse>> RemoveVilla(int id)
 		{
-
 			try
 			{
 				if (id == 0)
