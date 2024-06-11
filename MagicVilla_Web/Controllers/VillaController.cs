@@ -17,6 +17,7 @@ namespace MagicVilla_Web.Controllers
 			_mapper = mapper;
 		}
 
+		#region Read
 		public async Task<IActionResult> IndexVilla()
 		{
 			List<VillaDTO> list = new();
@@ -28,6 +29,7 @@ namespace MagicVilla_Web.Controllers
 			}
 			return View(list);
 		}
+		#endregion
 
 		#region Create
 		public async Task<IActionResult> CreateVilla()
